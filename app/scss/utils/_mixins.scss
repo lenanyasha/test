@@ -1,0 +1,7 @@
+@mixin generate-col($col-num) {
+  $width: calc((100% - (#{$col-num} - 1) * #{$margin-right}) / #{$col-num} );
+  .col-#{$col-num} {
+    width: $width;
+    float: left;
+  }
+}

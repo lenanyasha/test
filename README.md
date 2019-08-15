@@ -1,0 +1,5 @@
+# natours
+
+npm install
+
+gulp

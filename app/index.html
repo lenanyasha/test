@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="shortcut icon" type="image/png" href="assets/favicon.png">
+
+        <title>Natours | Exciting tours for adventurous people</title>
+    </head>
+    <body>
+      <header class="header">
+        <div class="header__logo-wrapper">
+            <img src="assets/logo-white.png" alt="logo" class="header__logo">
+        </div>
+
+        <div class="header__text-wrapper">
+            <h1 class="main-header">
+                <span class="main-header--primary">Outdoors</span>
+                <span class="main-header--secondary">is where life happens</span>
+            </h1>
+            <a href="#" class="button button--white button--animated">Discover our tours</a>
+        </div>
+      </header>
+      <main>
+        <section class="about-section">
+            <div class="text-center margin-bottom-large">
+                <h2 class="sub-header">
+                    Exciting tours for adventurous people
+                </h2>
+            </div>
+            <div class="row margin-top">
+                <div class="col-2">
+                    <h3 class="sub-sub-header margin-bottom-small">You're going to fall in love with nature</h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
+                        ducimus quam nisi exercitationem omnis earum qui.
+                    </p>
+
+                    <h3 class="sub-sub-header margin-bottom-small">Live adventures like you never have before</h3>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nulla deserunt voluptatum nam.
+                    </p>
+
+                    <a href="#" class="button-link ">Learn more &rarr;</a>
+                </div>
+                <div class="col-2">
+                    <div class="preview">
+                        <img
+                             sizes="20rem"
+                             class="preview__image preview__image--image-1"
+                             alt="image-1"
+                             src="assets/nat-1-large.jpg">
+
+                        <img
+                             sizes="20rem"
+                             class="preview__image preview__image--image-2"
+                             alt="image-2"
+                             src="assets/nat-2-large.jpg">
+
+                        <img
+                             sizes="20rem"
+                             class="preview__image preview__image--image-3"
+                             alt="image-3"
+                             src="assets/nat-3-large.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-features">
+            <div class="row">
+                <div class="col-4">
+                    <div class="feature-wrapper">
+                        <h3 class="sub-sub-header margin-bottom-small">Explore the world</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus eveniet ullam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="feature-wrapper">
+                        <h3 class="sub-sub-header margin-bottom-small">Meet nature</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus eveniet ullam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="feature-wrapper">
+                        <h3 class="sub-sub-header margin-bottom-small">Find your way</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus eveniet ullam.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="feature-wrapper">
+                        <h3 class="sub-sub-header margin-bottom-small">Live a healthier life</h3>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat necessitatibus eveniet ullam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscription-section">
+          <div class="text-center margin-bottom-large">
+              <h2 class="sub-header">
+                  How can we contact with you?
+              </h2>
+          </div>
+          <form id="form" class="subscription-form">
+            <div class="form">
+              <div class="form__element">
+                <label for="name" class="form__label">What is your name?</label>
+                <input type="text" class="form__input" name="Name" id="name" onblur="validateName()">
+                <div class="requirements"></div>
+              </div>
+              <div class="form__element">
+                <label for="name" class="form__label">How did you find us?</label>
+                <div class="form__select-wrapper">
+                  <select id="findUs" class="select" onchange="handleSelect()">
+                    <option value="friends" class="select-dropdown__list-item">From friends</option>
+                    <option value="networks" class="select-dropdown__list-item">From social networks</option>
+                    <option value="advertisement" class="select-dropdown__list-item">From advertisement</option>
+                </div>
+                </select>
+              </div>
+              <div class="form__element">
+                <label for="name" class="form__label">How do you want do recieve news?</label>
+                <div class="form__select-wrapper">
+                  <select id="recieveNews" class="select" onchange="handleSelect()">
+                    <option value="mail" class="select-dropdown__list-item">By mail</option>
+                    <option value="sms" class="select-dropdown__list-item">By SMS</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__element">
+                <label for="name" class="form__label">Share your email with us:</label>
+                <input type="email" class="form__input" name="Email" id="email" onblur="validateEmail()">
+                <div class="requirements"></div>
+              </div>
+              <div class="form__element" style="display: none">
+                <label for="name" class="form__label">Share your phone number with us:</label>
+                <input type="tel" class="form__input" name="Phone" id="phone" onblur="validatePhone()">
+                <div class="requirements"></div>
+              </div>
+              <div class="text-center margin-bottom-large">
+                <button type="submit" id="submitButton" class="button button--green button--animated">I want to recieve news</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+      <!-- <script type="text/javascript" src="js/custom-dropdown.js"></script> -->
+      <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "test-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "start": "gulp",
+    "sass": "gulp sass",
+    "html": "gulp html"
+  },
+  "author": "Ellen Gomon",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^11.13.8",
+    "axios": "^0.18.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-typescript": "^5.0.1",
+    "gulp-watch": "^5.0.1",
+    "requirejs": "^2.3.6",
+    "typescript": "^3.4.5"
+  },
+  "dependencies": {}
+}

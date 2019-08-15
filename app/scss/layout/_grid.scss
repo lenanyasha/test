@@ -1,0 +1,16 @@
+.row {
+  display: flex;
+  margin: 0 auto;
+  max-width: $row-width;
+
+  [class^="col-"] {
+    &:not(:last-child) {
+      margin-right: $margin-right;
+    }
+  }
+
+  @include generate-col(1);
+  @include generate-col(2);
+  @include generate-col(3);
+  @include generate-col(4);
+}

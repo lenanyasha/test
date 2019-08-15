@@ -1,0 +1,138 @@
+.form {
+  &__element {
+    margin-bottom: 2rem;
+  }
+
+  &__label {
+    display: block;
+    color: $medium-green;
+    margin-top: .7rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__input {
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      font-family: inherit;
+      color: inherit;
+      padding: 0 1rem;
+      height: 3rem;
+      border-radius: 0.2rem;
+      background-color: $white;
+      border: 3px solid transparent;
+      &:focus {
+        border: 3px solid $medium-green;
+      }
+    }
+
+    .invalid {
+      & ~ .requirements {
+        display: block;
+      }
+    }
+
+    .requirements {
+      margin-top: 0.2rem;
+      display: none;
+      width: 100%;
+      font-size: 1rem;
+      transition: 0.28s;
+      padding: 0.5rem 1rem;
+      border-radius: 0.2rem;
+      color: $white;
+      background-color: $red;
+    }
+
+    &__select-wrapper {
+      position: relative;
+      select {
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        position: relative;
+        width: 100%;
+        padding: 0 1rem;
+        border-radius: 0.2rem;
+        background-color: $white;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        height: 3rem;
+        font-size: 1rem;
+        color: $dark-grey;
+        outline: none;
+      }
+      &:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f0d7";
+        font-weight: 900;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $dark-grey;
+        font-size: 1.9rem;
+        padding-right: 0.5rem;
+        background-color: $white;
+        border-radius: 0.2rem;
+        z-index: 10;
+      }
+    }
+
+    .custom-select:before {
+      content: '';
+    }
+
+    .select-selected {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.2rem;
+      background-color: $white;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      &:after {
+        position: absolute;
+        content: "";
+        top: 1.2rem;
+        right: 1.2rem;
+        width: 0;
+        height: 0;
+        border: 0.4rem solid transparent;
+        border-color: $dark-grey transparent transparent transparent;
+      }
+      &.select-arrow-active:after {
+        border-color: transparent transparent $dark-grey transparent;
+        top: 0.8rem;
+      }
+    }
+
+    .select-items div, .select-selected {
+      padding: 0.5rem 1rem;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+    }
+
+    .select-items {
+      position: absolute;
+      background-color: $white;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+
+    .select-hide {
+      display: none;
+    }
+
+    .select-items div:hover {
+      &:hover {
+         background-color: $medium-green;
+         color: $white;
+         transition: all ease-in-out .3s;
+       }
+    }
+}

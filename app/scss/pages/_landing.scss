@@ -1,0 +1,44 @@
+.about-section {
+  margin-top: -20vh;
+  padding: 15rem 0 20rem;
+  background-color: $light-grey;
+  .margin-top {
+    margin-top: 6rem;
+  }
+}
+
+.section-features {
+  margin-bottom: 10rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($light-green, 0.8),
+      rgba($dark-green, 0.8)
+    ),
+    url(../assets/nat-4.jpg);
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -10rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.subscription-section {
+  border-radius: 0.3rem;
+  padding: 10rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($dark-green, 0.5),
+      rgba(#000, 0.7)
+    ),
+    url(../assets/nat-2-large.jpg);
+    background-size: cover;
+    background-position: top;
+}
+
+.subscription-form {
+  width: 30%;
+  margin: 0 auto;
+}

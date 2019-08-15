@@ -1,0 +1,40 @@
+.preview {
+  position: relative;
+  margin-top: 1rem;
+
+  &__image {
+    width: 60%;
+    box-shadow: 0 1.25rem 3.5rem rgba($black, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 1.2rem;
+
+    &--image-1 {
+      left: 0;
+      top: -2rem;
+    }
+
+    &--image-2 {
+      right: 0;
+      top: 2rem;
+    }
+
+    &--image-3 {
+      left: 20%;
+      top: 10rem;
+    }
+
+    &:hover {
+      outline: 1rem solid $medium-green;
+      transform: scale(1.05) translateY(-0.3rem);
+      box-shadow: 0 2rem 3rem rgba($black, 0.5);
+      z-index: 20;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.95);
+  }
+}
